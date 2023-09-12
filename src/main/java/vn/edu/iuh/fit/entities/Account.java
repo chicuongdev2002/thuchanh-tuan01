@@ -4,20 +4,20 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity(name = "account")
+//@Entity(name = "account")
 public class Account {
-    @Id
-    @Column(name = "account_id",nullable = false,columnDefinition = "nvarchar(50)")
+//    @Id
+//    @Column(name = "account_id",nullable = false,columnDefinition = "nvarchar(50)")
     private String accountId;
-    @Column(name = "full_name",nullable = false,columnDefinition = "nvarchar(50)")
+   // @Column(name = "full_name",nullable = false,columnDefinition = "nvarchar(50)")
     private String fullName;
-    @Column(name = "password",nullable = false,columnDefinition = "nvarchar(50)")
+    //@Column(name = "password",nullable = false,columnDefinition = "nvarchar(50)")
     private String password;
-    @Column(name = "email",columnDefinition = "nvarchar(50)")
+    //@Column(name = "email",columnDefinition = "nvarchar(50)")
     private String email;
-    @Column(name = "phone",columnDefinition = "nvarchar(50)")
+    //@Column(name = "phone",columnDefinition = "nvarchar(50)")
     private String phone;
-    @Column(name = "status",nullable = false,columnDefinition = "tinyint(4)")
+    //@Column(name = "status",nullable = false,columnDefinition = "tinyint(4)")
     private int status;
 
     public Account() {
