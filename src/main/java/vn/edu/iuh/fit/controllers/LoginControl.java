@@ -12,7 +12,7 @@ import vn.edu.iuh.fit.repositories.RoleRepository;
 
 import java.io.IOException;
 
-@WebServlet(name="loginControl",value="/login-control")
+@WebServlet(urlPatterns = {"/LoginControl"})
 public class LoginControl  extends  HttpServlet{
 
     private AccountRepository AccRe = new AccountRepository();

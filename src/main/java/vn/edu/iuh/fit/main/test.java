@@ -7,17 +7,17 @@ public class test {
     public static void main(String[] args) throws SQLException {
 
 
-//        String username = "Tran Tri Met";
-//        String password = "123";
-//
-//        AccountRepository AccRepo = new AccountRepository();
-//        Account acc = AccRepo.checkAccount(username, password);
-//        if (acc == null) {
-//            System.out.println("Sai username hoac password!");
-//        } else {
-//            System.out.println(acc.toString());
-//
-//        }
+        String username = "Met";
+        String password = "123";
+
+        AccountRepository AccRepo = new AccountRepository();
+        Account acc = AccRepo.checkAccount(username, password);
+        if (acc == null) {
+            System.out.println("Sai username hoac password!");
+        } else {
+            System.out.println(acc.toString());
+
+        }
         System.out.println();
     }
 }
