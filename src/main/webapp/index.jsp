@@ -34,16 +34,16 @@
 <body>
 <div class="wrapper">
     <h2 class="text-center">Đăng nhập</h2>
-    <form action="LoginControl" method="post">
+    <form action="login-control" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Tên đăng nhập</label>
-            <input type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập">
+            <input name="username" type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập">
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Mật khẩu</label>
-            <input type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
+            <input name="password" type="password" class="form-control" id="password" placeholder="Nhập mật khẩu">
         </div>
-        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+        <button name="" type="submit" class="btn btn-primary">Đăng nhập</button>
         <input type="hidden" name="action" value="login">
         <h5>Bạn chưa có tài khoản?</h5>
         <a href="DangKi.jsp" class="btn-btn-link">Đăng kí</a>

@@ -38,7 +38,7 @@
 <body>
 <div class="wrapper">
     <h2 class="text-center">Đăng ký tài khoản</h2>
-    <form id="registrationForm" onsubmit="return validateForm()" method="post">
+    <form  action="LoginControl" id="registrationForm" onsubmit="return validateForm()" method="post">
         <div class="mb-3">
             <label for="accountId" class="form-label">Account ID:</label>
             <input type="text" id="accountId" name="accountId" class="form-control" required>
@@ -46,7 +46,7 @@
 
         <div class="mb-3">
             <label for="fullName" class="form-label">Họ và tên:</label>
-            <input type="text" id="fullName" name="fullName" class="form-control" required>
+            <input type="text" id="fullName" name="username" class="form-control" required>
         </div>
 
         <div class="mb-3">

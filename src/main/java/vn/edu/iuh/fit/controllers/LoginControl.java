@@ -12,7 +12,7 @@ import vn.edu.iuh.fit.repositories.RoleRepository;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"/LoginControl"})
+@WebServlet(name = "LoginControl",value = "/login-control")
 public class LoginControl  extends  HttpServlet{
 
     private AccountRepository AccRe = new AccountRepository();
@@ -24,17 +24,19 @@ public class LoginControl  extends  HttpServlet{
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("test");
   try {
-      String username =req.getParameter("username");
-      String password =req.getParameter("password");
-      Account a=AccRe.checkAccount(username,password);
-      if(a==null)
-      {
-          resp.getWriter().println("Sai user hoặc password");
-      }else
-      {
-          resp.sendRedirect("Trangchu.jsp");
+      String action=req.getParameter("action");
+      if(action.equalsIgnoreCase("login")){
+          String username = req.getParameter("username");
+          String password = req.getParameter("password");
+          System.out.print(username + " " + password);
+          Account a = AccRe.checkAccount(username, password);
+
+          if (a == null) {
+              resp.getWriter().println("Thon tin dang nhap khong chinh xac");
+          } else {
+             req.getRequestDispatcher("WEB-INF/Trangchu.jsp").forward(req,resp);
+          }
       }
   }catch(Exception e)
         {
