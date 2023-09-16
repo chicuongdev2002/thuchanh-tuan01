@@ -21,20 +21,13 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#dangki").click(function() {
-                // Chuyển hướng đến trang "dangki.jsp"
-                window.location.href = "WEB-INF/DangKi.jsp";
-            });
-        });
-    </script>
 
 </head>
 <body>
 <div class="wrapper">
     <h2 class="text-center">Đăng nhập</h2>
     <form action="login-control" method="post">
+       <p class="text-danger">${mes}</p>
         <div class="mb-3">
             <label for="username" class="form-label">Tên đăng nhập</label>
             <input name="username" type="text" class="form-control" id="username" placeholder="Nhập tên đăng nhập">
@@ -46,8 +39,8 @@
         <button name="" type="submit" class="btn btn-primary">Đăng nhập</button>
         <input type="hidden" name="action" value="login">
         <h5>Bạn chưa có tài khoản?</h5>
-        <a href="DangKi.jsp" class="btn-btn-link">Đăng kí</a>
-        <input type="hidden" name="action" value="log">
+        <a href="dangki.jsp" class="btn-btn-link">Đăng kí</a>
+        <input type="hidden" name="log" value="log">
 
     </form>
 </div>

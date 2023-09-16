@@ -24,25 +24,21 @@ public class LoginControl  extends  HttpServlet{
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-  try {
       String action=req.getParameter("action");
       if(action.equalsIgnoreCase("login")){
           String username = req.getParameter("username");
           String password = req.getParameter("password");
-          System.out.print(username + " " + password);
+          System.out.println(username + " " + password);
           Account a = AccRe.checkAccount(username, password);
 
           if (a == null) {
-              resp.getWriter().println("Thon tin dang nhap khong chinh xac");
+              resp.getWriter().println("Thong tin dang nhap khong chinh xac");
+              req.getRequestDispatcher("index.jsp").forward(req,resp);
           } else {
-             req.getRequestDispatcher("WEB-INF/Trangchu.jsp").forward(req,resp);
+              System.out.println("Login thanh cong");
+             resp.sendRedirect("dashboard.jsp");
+
           }
       }
-  }catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-
-
     }
 }
